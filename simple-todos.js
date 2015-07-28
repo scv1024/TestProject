@@ -1,14 +1,15 @@
 // simple-todos.js
 Tasks = new Mongo.Collection("tasks");
-
+//comment
 if (Meteor.isClient) {
+
   // This code only runs on the client
   Template.body.helpers({
     tasks: function () {
     return Tasks.find({}, {sort: {createdAt: -1}});
     }
   });
-
+//comment
   Template.body.events({
   "submit .new-task": function (event) {
     // This function is called when the new task form is submitted
